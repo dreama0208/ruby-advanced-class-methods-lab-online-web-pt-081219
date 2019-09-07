@@ -12,16 +12,16 @@ class Song
 
   def self.create
     song = self.new
-    @name = name
     @@all << song
     song
   end
 
   def self.new_by_name(name)
-    @@all.find{ |e| e.name == name }
+    @name = name
   end
 
   def self.create_by_name(name)
-
+    @name = name
+    @@all << self
   end
 end
